@@ -1,0 +1,18 @@
+int PirSensor = 2;
+int Buzzer = 12;
+bool theif = false;
+
+void setup() {
+  	pinMode( PirSensor, INPUT);
+  	pinMode ( Buzzer, OUTPUT);
+}
+    void loop () {
+    theif = digitalRead(PirSensor);
+    if(theif == true) {
+     	digitalWrite(Buzzer, HIGH);
+      	delay(2000);
+    }
+    else {
+      digitalWrite(Buzzer, LOW);
+    }
+  }
